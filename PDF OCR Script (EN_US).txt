@@ -1,0 +1,58 @@
+PDF OCR Script
+This Python script performs OCR (Optical Character Recognition) on PDF files, allowing for text extraction and creating a new PDF with the transcribed text. It utilizes the PyPDF2, pytesseract, and Pillow libraries.
+
+Requirements
+Python 3.6 or higher
+Tesseract OCR installed on the system
+Installation
+Install Python 3.6 or higher.
+Install Tesseract OCR. On Windows, you can download the installer here.
+Install the required Python libraries:
+bash
+Copy code
+pip install PyPDF2 pytesseract Pillow
+Configuration
+Configure the path to the Tesseract OCR executable in the script. The default path in the script is:
+
+python
+Copy code
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+Adjust it as necessary to the correct path of the executable on your system.
+
+Set the path to the PDF file in the script:
+
+python
+Copy code
+pdf_path = r'C:\Users\bruno\Downloads\Unicesumar\atividade1.pdf'
+Usage
+Run the Python script:
+bash
+Copy code
+python script_name.py
+Replace script_name.py with the name of your script file.
+
+Functionality
+The script reads the specified PDF.
+Attempts to extract text directly from the PDF.
+If images are found in the PDF pages, it performs OCR using Tesseract to extract text from the images.
+Creates a new PDF containing the extracted text and saves it in the same directory with the suffix _with_text.
+Example Output
+The script will print the extracted text to the console and create a new PDF with the transcribed text.
+
+Common Issues
+Ensure that Tesseract OCR is correctly installed and the path to the executable is correct.
+Verify that the PDF file is in the specified path.
+If the extracted text is incorrect, you may need to adjust the Tesseract configuration or the quality of the images in the PDF.
+Contributions
+Contributions are welcome! Feel free to open issues or pull requests in the project repository.
+
+License
+This project is licensed under the MIT License.
+
+This README provides an overview of the script, including installation, configuration, and usage instructions. Adjust as necessary to reflect specific details of your environment or any changes made to the script.
+
+
+
+
+
+

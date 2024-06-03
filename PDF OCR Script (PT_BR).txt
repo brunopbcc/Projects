@@ -1,0 +1,52 @@
+PDF OCR Script
+Este script em Python realiza OCR (Reconhecimento Óptico de Caracteres) em arquivos PDF, permitindo a extração de texto e a criação de um novo PDF com o texto transcrito. Ele utiliza as bibliotecas PyPDF2, pytesseract e Pillow.
+
+Requisitos
+Python 3.6 ou superior
+Tesseract OCR instalado no sistema
+Instalação
+Instale o Python 3.6 ou superior.
+Instale o Tesseract OCR. No Windows, você pode baixar o instalador aqui.
+Instale as bibliotecas Python necessárias:
+bash
+Copy code
+pip install PyPDF2 pytesseract Pillow
+Configuração
+Configure o caminho para o executável do Tesseract OCR no script. O caminho padrão no script é:
+
+python
+Copy code
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+Ajuste se necessário para o caminho correto do executável no seu sistema.
+
+Configure o caminho do arquivo PDF no script:
+
+python
+Copy code
+pdf_path = r'C:\Users\bruno\Downloads\Unicesumar\atividade1.pdf'
+Uso
+Execute o script Python:
+bash
+Copy code
+python script_name.py
+Substitua script_name.py pelo nome do seu arquivo de script.
+
+Funcionamento
+O script lê o PDF especificado.
+Tenta extrair o texto diretamente do PDF.
+Caso encontre imagens nas páginas do PDF, realiza OCR usando o Tesseract para extrair o texto das imagens.
+Cria um novo arquivo PDF contendo o texto extraído e salva no mesmo diretório com o sufixo _with_text.
+Exemplo de Saída
+O script imprimirá o texto extraído no console e criará um novo PDF com o texto transcrito.
+
+Problemas Comuns
+Certifique-se de que o Tesseract OCR esteja corretamente instalado e o caminho para o executável esteja correto.
+Verifique se o arquivo PDF está no caminho especificado.
+Caso o texto extraído esteja incorreto, pode ser necessário ajustar a configuração do Tesseract ou a qualidade das imagens no PDF.
+Contribuições
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests no repositório do projeto.
+
+Licença
+Este projeto está licenciado sob a MIT License.
+
+Este README fornece uma visão geral do script, incluindo instruções de instalação, configuração e uso. Ajuste conforme necessário para refletir detalhes específicos do seu ambiente ou quaisquer mudanças feitas no script.
